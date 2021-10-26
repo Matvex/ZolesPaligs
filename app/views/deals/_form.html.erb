@@ -1,0 +1,45 @@
+<%= form_with(model: deal) do |form| %>
+  
+  <%= form.hidden_field :game_id, value: @game.id %>
+
+  <% if deal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(deal.errors.count, "error") %> prohibited this deal from being saved:</h2>
+
+      <ul>
+        <% deal.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :solist_nr %>
+    <%= form.text_field :solist_nr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :win %>
+    <%= form.text_field :win %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jani %>
+    <%= form.text_field :jani %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bezstikis %>
+    <%= form.text_field :bezstikis %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zole %>
+    <%= form.text_field :zole %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

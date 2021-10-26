@@ -10,7 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_14_184247) do
+ActiveRecord::Schema.define(version: 2021_11_01_164526) do
+
+  create_table "deals", force: :cascade do |t|
+    t.integer "solist_nr"
+    t.boolean "win"
+    t.boolean "jani"
+    t.boolean "bezstikis"
+    t.boolean "zole"
+    t.integer "game_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["game_id"], name: "index_deals_on_game_id"
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "player0_name"
+    t.string "player1_name"
+    t.string "player2_name"
+    t.string "player3_name"
+    t.boolean "four_players"
+    t.boolean "pules"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_games_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

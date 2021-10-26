@@ -1,1 +1,11 @@
 @import "materialize-css/dist/css/materialize";
+@import "./games";
+
+
+html, body {
+	min-height: 90vh;
+	overflow: hidden;
+}
+body {
+
+}
