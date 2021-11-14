@@ -4,8 +4,7 @@ class CreateDeals < ActiveRecord::Migration[6.1]
 
       t.integer :solist_nr
       t.boolean :win
-      t.boolean :jani 
-      t.boolean :bezstikis
+      t.integer :severity
       t.boolean :zole
       t.references :game, index: true
 

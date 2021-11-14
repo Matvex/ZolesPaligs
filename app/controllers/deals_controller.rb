@@ -64,6 +64,6 @@ class DealsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def deal_params
-      params.fetch(:deal, {}).permit(:solist_nr, :win, :jani, :bezstikis, :zole, :game_id)
+      params.fetch(:deal, {}).permit(:solist_nr, :win, :severity, :zole, :game_id)
     end
 end

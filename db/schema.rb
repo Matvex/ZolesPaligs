@@ -15,8 +15,7 @@ ActiveRecord::Schema.define(version: 2021_11_01_164526) do
   create_table "deals", force: :cascade do |t|
     t.integer "solist_nr"
     t.boolean "win"
-    t.boolean "jani"
-    t.boolean "bezstikis"
+    t.integer "severity"
     t.boolean "zole"
     t.integer "game_id"
     t.datetime "created_at", precision: 6, null: false
