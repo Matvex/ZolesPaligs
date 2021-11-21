@@ -2,13 +2,13 @@ class DealsController < ApplicationController
   before_action :set_deal, only: %i[ show edit update destroy ]
 
   # GET /deals or /deals.json
-  def index
-    @deals = Deal.all
-  end
+  # def index
+  #   @deals = Deal.all
+  # end
 
   # GET /deals/1 or /deals/1.json
-  def show
-  end
+  # def show
+  # end
 
   # GET /deals/new
   def new
@@ -16,8 +16,8 @@ class DealsController < ApplicationController
   end
 
   # GET /deals/1/edit
-  def edit
-  end
+  # def edit
+  # end
 
   # POST /deals or /deals.json
   def create
@@ -34,27 +34,27 @@ class DealsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /deals/1 or /deals/1.json
-  def update
-    respond_to do |format|
-      if @deal.update(deal_params)
-        format.html { redirect_to @deal, notice: "Deal was successfully updated." }
-        format.json { render :show, status: :ok, location: @deal }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @deal.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # # PATCH/PUT /deals/1 or /deals/1.json
+  # def update
+  #   respond_to do |format|
+  #     if @deal.update(deal_params)
+  #       format.html { redirect_to @deal, notice: "Deal was successfully updated." }
+  #       format.json { render :show, status: :ok, location: @deal }
+  #     else
+  #       format.html { render :edit, status: :unprocessable_entity }
+  #       format.json { render json: @deal.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
-  # DELETE /deals/1 or /deals/1.json
-  def destroy
-    @deal.destroy
-    respond_to do |format|
-      format.html { redirect_to deals_url, notice: "Deal was successfully destroyed." }
-      format.json { head :no_content }
-    end
-  end
+  # # DELETE /deals/1 or /deals/1.json
+  # def destroy
+  #   @deal.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to deals_url, notice: "Deal was successfully destroyed." }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

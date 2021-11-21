@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :deals
   resources :games
+  resources :deals, only: [:create]
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations',
@@ -15,5 +15,5 @@ Rails.application.routes.draw do
     get 'reset_password', to: 'users/passwords#edit'
   end
 
-  root to: 'application#home'
+  root to: 'games#index'
 end
