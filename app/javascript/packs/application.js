@@ -12,4 +12,4 @@ import 'materialize-css/dist/js/materialize'
 
 Rails.start()
 Turbolinks.start()
-AgitctiveStorage.start()
+ActiveStorage.start()
